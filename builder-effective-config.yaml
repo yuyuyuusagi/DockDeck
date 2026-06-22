@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.yun.dockdeck
+productName: DockDeck
+win:
+  target: nsis
+files: []
+electronVersion: 42.4.1

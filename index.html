@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>DockDeck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="dock"></div>
+
+    <div id="overlay" class="hidden">
+        <div id="panel">
+            <input id="nameInput" placeholder="表示名">
+            <input id="iconInput" placeholder="アイコン 例: 🌐">
+            <input id="urlInput" placeholder="URL">
+            <div>
+                <button id="saveBtn">保存</button>
+                <button id="addBtn">新規追加</button>
+                <button id="deleteBtn">削除</button>
+                <button id="closePanelBtn">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

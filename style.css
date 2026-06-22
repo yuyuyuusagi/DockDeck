@@ -1,0 +1,138 @@
+﻿body {
+    margin: 0;
+    padding: 12px;
+    background: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    user-select: none;
+    overflow: hidden;
+    -webkit-app-region: drag;
+}
+
+#dock {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 24px;
+    background: rgba(30, 30, 35, 0.55);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+    #dock.horizontal {
+        flex-direction: row;
+    }
+
+    #dock.vertical {
+        flex-direction: column;
+    }
+
+.dockItem {
+    width: 62px;
+    height: 72px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: 0.15s;
+    -webkit-app-region: no-drag;
+}
+
+    .dockItem:hover {
+        background: rgba(255,255,255,0.16);
+        transform: translateY(-6px) scale(1.08);
+    }
+
+.selected {
+    background: rgba(255,255,255,0.18);
+}
+
+.icon {
+    font-size: 34px;
+    line-height: 1;
+}
+
+.label {
+    font-size: 10px;
+    color: white;
+    max-width: 58px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.indicator {
+    width: 7px;
+    height: 4px;
+    border-radius: 99px;
+    background: rgba(255,255,255,0.75);
+}
+
+.close {
+    background: rgba(255, 70, 70, 0.18);
+}
+
+    .close:hover {
+        background: rgba(255, 70, 70, 0.35);
+    }
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-app-region: no-drag;
+}
+
+#panel {
+    width: 310px;
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(28, 28, 32, 0.96);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    #panel input {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background: #2f2f35;
+        color: white;
+        outline: none;
+    }
+
+        #panel input::placeholder {
+            color: #bdbdbd;
+        }
+
+.panelButtons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#panel button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #4b4b55;
+    color: white;
+    cursor: pointer;
+}
+
+    #panel button:hover {
+        background: #686875;
+    }
+
+.hidden {
+    display: none !important;
+}
